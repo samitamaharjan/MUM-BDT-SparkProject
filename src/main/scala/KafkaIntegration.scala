@@ -31,19 +31,21 @@ object KafkaIntegration {
       "bootstrap.servers" -> "localhost:9092",
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
-      "group.id" -> "group1",
+      "group.id" -> "1",
       "auto.offset.reset" -> "latest",
       "enable.auto.commit" -> (false: java.lang.Boolean)
     )
-    val conf = new SparkConf().setMaster("local").setAppName("NetworkWordCount")
-    val ssc = new StreamingContext(conf, Seconds(1))
+    val conf = new SparkConf().setMaster("local[1]").setAppName("KafkaIntegration")
+    val ssc = new StreamingContext(conf, Seconds(15))
     val topics = Array("test")
     val stream = KafkaUtils.createDirectStream[String, String](
-      streamingContext,
+      ssc,
       PreferConsistent,
       Subscribe[String, String](topics, kafkaParams)
     )
 
-    stream.map(record => (record.key, record.value))
+    stream.map(record => (record.key, record.value)).print()
+    ssc.start()
+    ssc.awaitTermination()
   }
 }

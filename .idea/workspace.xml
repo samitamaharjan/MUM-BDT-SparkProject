@@ -1,7 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="489fb14b-bbbe-4450-8f68-95e7a866f9e7" name="Default" comment="" />
+    <list default="true" id="489fb14b-bbbe-4450-8f68-95e7a866f9e7" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sparkproject.iml" afterPath="$PROJECT_DIR$/.idea/modules/sparkproject.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$008162a457a35e0c9603$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$008162a457a35e0c9603$.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$008162a457a35e0c9603.cache" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$008162a457a35e0c9603.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0b5c53c67cf2f5b7002d$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0b5c53c67cf2f5b7002d$.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0b5c53c67cf2f5b7002d.cache" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0b5c53c67cf2f5b7002d.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$2aa28821b1afd36fa5b3$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$2aa28821b1afd36fa5b3$.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$2aa28821b1afd36fa5b3.cache" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$2aa28821b1afd36fa5b3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$71b3663821e81cab81bb$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$71b3663821e81cab81bb$.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$71b3663821e81cab81bb.cache" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$71b3663821e81cab81bb.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-docs.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-sources.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/KafkaIntegration.scala" afterPath="$PROJECT_DIR$/src/main/scala/KafkaIntegration.scala" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-docs.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-sources.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-docs.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-sources.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test.xml" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -20,11 +111,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="KafkaIntegration.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KafkaIntegration.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/KafkaIntegration.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            <state relative-caret-position="235">
+              <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -32,11 +123,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WordCount.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/WordCount.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            <state relative-caret-position="64">
+              <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -52,6 +155,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -64,8 +170,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/scalaScript.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Test.sc" />
         <option value="$PROJECT_DIR$/input/input.txt" />
-        <option value="$PROJECT_DIR$/src/main/scala/KafkaIntegration.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/src/main/scala/WordCount.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/KafkaIntegration.scala" />
       </list>
     </option>
   </component>
@@ -75,6 +182,7 @@
     <option name="width" value="1346" />
     <option name="height" value="581" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -102,7 +210,20 @@
             <path>
               <item name="SparkProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkProject" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SparkProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SparkProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SparkProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SparkProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -135,6 +256,20 @@
     <configuration name="KafkaIntegration" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="KafkaIntegration" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="sparkproject" />
+      <envs />
+    </configuration>
+    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="WordCount" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -226,19 +361,21 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
       <item index="1" class="java.lang.String" itemvalue="Application.KafkaIntegration" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WordCount" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Application.KafkaIntegration" />
-        <item index="1" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+        <item index="1" class="java.lang.String" itemvalue="Application.WordCount" />
+        <item index="2" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1521308821603" />
+    <option name="lastUpdateTimestamp" value="1521310288871" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -289,27 +426,27 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14658634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44265592" sideWeight="0.43277946" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31790745" sideWeight="0.56722057" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279678" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25226587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17871486" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40763053" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17706238" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40643862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59356135" sideWeight="0.49697885" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -396,21 +533,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/KafkaIntegration.scala">
+    <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="64">
+          <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/WordCount.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/KafkaIntegration.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="235">
+          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
