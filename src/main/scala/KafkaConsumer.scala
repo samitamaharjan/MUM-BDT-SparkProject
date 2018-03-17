@@ -1,5 +1,7 @@
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.SparkConf
+import org.apache.spark.network.server.MessageHandler
+import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
@@ -25,7 +27,14 @@ object KafkaConsumer {
       Subscribe[String, String](topics, kafkaParams)
     )
 
-    stream.map(record => (record.value)).print()
+    val messageHandler = new MessageHandler()
+    stream.map(r => (r.key, r.value)).foreachRDD{(rdd: RDD[(String, String)]) =>
+      val data = rdd.map{_._2}.collect()
+      data.foreach(x => {
+        val msg = new Message(x)
+        messageHandler.handleMessage(msg)
+      })
+    }
     ssc.start()
     ssc.awaitTermination()
   }
