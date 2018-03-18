@@ -9,3 +9,4 @@ run
 reload
 compile
 run
+rm -fr ~/.ivy2/cache

@@ -6070,7 +6070,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 5516ms :: artifacts dl 110ms
+[debug] :: resolution report :: resolve 4328ms :: artifacts dl 84ms
 [debug] 	report for default#sparkproject-build;0.1-SNAPSHOT compile produced in /home/cloudera/IdeaProjects/SparkProject/project/target/resolution-cache/reports/default-sparkproject-build-compile.xml
 [debug] 	report for default#sparkproject-build;0.1-SNAPSHOT runtime produced in /home/cloudera/IdeaProjects/SparkProject/project/target/resolution-cache/reports/default-sparkproject-build-runtime.xml
 [debug] 	report for default#sparkproject-build;0.1-SNAPSHOT test produced in /home/cloudera/IdeaProjects/SparkProject/project/target/resolution-cache/reports/default-sparkproject-build-test.xml
@@ -6084,5 +6084,5 @@
 [debug] 	report for default#sparkproject-build;0.1-SNAPSHOT docs produced in /home/cloudera/IdeaProjects/SparkProject/project/target/resolution-cache/reports/default-sparkproject-build-docs.xml
 [debug] 	report for default#sparkproject-build;0.1-SNAPSHOT pom produced in /home/cloudera/IdeaProjects/SparkProject/project/target/resolution-cache/reports/default-sparkproject-build-pom.xml
 [debug] 	report for default#sparkproject-build;0.1-SNAPSHOT scala-tool produced in /home/cloudera/IdeaProjects/SparkProject/project/target/resolution-cache/reports/default-sparkproject-build-scala-tool.xml
-[debug] 	resolve done (5516ms resolve - 110ms download)
+[debug] 	resolve done (4328ms resolve - 84ms download)
 [info] Done updating.

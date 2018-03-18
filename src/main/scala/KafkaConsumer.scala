@@ -1,13 +1,12 @@
-import java.util.UUID
-
 import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark.SparkConf
-import org.apache.spark.network.server.MessageHandler
+import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010._
+import org.apache.spark.sql.hive.HiveContext
 
 object KafkaConsumer {
 
@@ -22,7 +21,11 @@ object KafkaConsumer {
     )
 
     val conf = new SparkConf().setMaster("local[1]").setAppName("KafkaConsumer")
+    conf.set("spark.driver.allowMultipleContexts", "true")
     val ssc = new StreamingContext(conf, Seconds(15))
+    val ss = SparkSession.builder().config(conf).getOrCreate()
+    val sc = ss.sparkContext
+
     val topics = Array("test") // can listen to multiple topics
     val stream = KafkaUtils.createDirectStream[String, String](
       ssc,
@@ -30,18 +33,22 @@ object KafkaConsumer {
       Subscribe[String, String](topics, kafkaParams)
     )
 
-    val messageHandler = new MessageHandler()
-    stream.map(r => (r.key, r.value)).foreachRDD{(rdd: RDD[(String, String)]) =>
-     /* val data = rdd.map{_._2}.collect()
-      data.foreach(x => {
-        val msg = new Message(x)
-        messageHandler.handleMessage(msg)
-      })*/
-      if (rdd.count() > 0) {
-        val id = UUID.randomUUID().toString;
-        rdd.saveAsTextFile("hdfs://quickstart.cloudera:8020/user/cloudera/SparkProject/" + id)
-      }
-    }
+    //val messageHandler = new MessageHandler()
+    val hiveContext = new HiveContext(sc)
+    import hiveContext.implicits._
+
+    stream.map(r => (r.key, r.value)).
+      foreachRDD{(rdd: RDD[(String, String)]) => {
+        if (rdd.count() > 0) {
+          val movieDF = rdd. //(null,"123,123456,4,2018-01-02")
+            map(_._2). //"123,123456,4,2018-01-02"
+            map(x => new Message(x)). // message object
+            map(msg => (msg.getMovieId(), msg.getCustomerId(), msg.getRating(), msg.getRatingDate())).
+            toDF("movieId", "customerId", "rating", "ratingDate")
+
+          movieDF.write.mode(SaveMode.Append).saveAsTable("movie_rating")
+        }
+      }}
     ssc.start()
     ssc.awaitTermination()
   }
