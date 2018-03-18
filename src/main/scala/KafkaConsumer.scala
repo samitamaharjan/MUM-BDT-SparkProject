@@ -1,3 +1,5 @@
+import java.util.UUID
+
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.SparkConf
 import org.apache.spark.network.server.MessageHandler
@@ -18,9 +20,10 @@ object KafkaConsumer {
       "auto.offset.reset" -> "latest",
       "enable.auto.commit" -> (false: java.lang.Boolean)
     )
+
     val conf = new SparkConf().setMaster("local[1]").setAppName("KafkaConsumer")
     val ssc = new StreamingContext(conf, Seconds(15))
-    val topics = Array("test")
+    val topics = Array("test") // can listen to multiple topics
     val stream = KafkaUtils.createDirectStream[String, String](
       ssc,
       PreferConsistent,
@@ -29,11 +32,15 @@ object KafkaConsumer {
 
     val messageHandler = new MessageHandler()
     stream.map(r => (r.key, r.value)).foreachRDD{(rdd: RDD[(String, String)]) =>
-      val data = rdd.map{_._2}.collect()
+     /* val data = rdd.map{_._2}.collect()
       data.foreach(x => {
         val msg = new Message(x)
         messageHandler.handleMessage(msg)
-      })
+      })*/
+      if (rdd.count() > 0) {
+        val id = UUID.randomUUID().toString;
+        rdd.saveAsTextFile("hdfs://quickstart.cloudera:8020/user/cloudera/SparkProject/" + id)
+      }
     }
     ssc.start()
     ssc.awaitTermination()
