@@ -22,8 +22,10 @@ object KafkaConsumer {
 
     val conf = new SparkConf().setMaster("local[1]").setAppName("KafkaConsumer")
     conf.set("spark.driver.allowMultipleContexts", "true")
+    //conf.set("hive.metastore.warehouse.dir", "/user/hive/warehouse")
+    conf.set("hive.metastore.uris", "thrift://127.0.0.1:9083")
     val ssc = new StreamingContext(conf, Seconds(15))
-    val ss = SparkSession.builder().config(conf).getOrCreate()
+    val ss = SparkSession.builder().enableHiveSupport().config(conf).getOrCreate()
     val sc = ss.sparkContext
 
     val topics = Array("test") // can listen to multiple topics

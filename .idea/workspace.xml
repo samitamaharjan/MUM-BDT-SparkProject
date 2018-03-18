@@ -2,80 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="489fb14b-bbbe-4450-8f68-95e7a866f9e7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_httpcomponents_httpclient_4_3_6_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_httpcomponents_httpcore_4_3_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sparkproject.iml" afterPath="$PROJECT_DIR$/.idea/modules/sparkproject.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
       <change beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
       <change beforePath="$PROJECT_DIR$/metastore_db/db.lck" afterPath="" />
       <change beforePath="$PROJECT_DIR$/metastore_db/dbex.lck" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/sparkproject-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-docs.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-sources.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-sparkproject-build-test.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
+      <change beforePath="$PROJECT_DIR$/spark-warehouse/movie_rating/.part-00000-d7fc0cd7-3fc4-45dc-9564-02b210aed111-c000.snappy.parquet.crc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/spark-warehouse/movie_rating/.part-00000-f4d48854-63a8-40f9-adf6-84e05c2d4e40-c000.snappy.parquet.crc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/spark-warehouse/movie_rating/part-00000-d7fc0cd7-3fc4-45dc-9564-02b210aed111-c000.snappy.parquet" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/spark-warehouse/movie_rating/part-00000-f4d48854-63a8-40f9-adf6-84e05c2d4e40-c000.snappy.parquet" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/KafkaConsumer.scala" afterPath="$PROJECT_DIR$/src/main/scala/KafkaConsumer.scala" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Message.scala" afterPath="$PROJECT_DIR$/src/main/scala/Message.scala" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/MessageHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/MessageHandler.scala" />
-      <change beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject$sources_2.11/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/sparkproject_2.11/0.1/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-docs.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-sources.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject$sources_2.11-test.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-docs.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-sources.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-sparkproject_2.11-test.xml" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/KafkaIntegration$.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/KafkaIntegration.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ssExtractDependencies/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ssExtractDependencies/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,8 +51,8 @@
       <file leaf-file-name="PlotData.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/PlotData.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="143">
+              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -155,8 +91,8 @@
       <file leaf-file-name="KafkaConsumer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/KafkaConsumer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="74">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
               </folding>
@@ -467,14 +403,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997987" sideWeight="0.49697885" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43460765" sideWeight="0.49697885" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43460765" sideWeight="0.4939577" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997987" sideWeight="0.5030211" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45472836" sideWeight="0.47583082" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41046277" sideWeight="0.56722057" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47887325" sideWeight="0.5241692" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997987" sideWeight="0.4939577" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46478873" sideWeight="0.5143505" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -619,14 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/PlotData.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/MessageHandler.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -643,10 +571,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/PlotData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/KafkaConsumer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        <state relative-caret-position="74">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
           </folding>

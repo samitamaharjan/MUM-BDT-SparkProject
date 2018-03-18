@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:41 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -11,10 +11,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Shutting down instance a816c00e-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:02 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:41 PDT 2018:
+Shutting down instance a816c00e-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:41 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -112,42 +112,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 123 more
+	... 107 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -177,7 +161,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -276,36 +260,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 122 more
+	... 106 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -335,7 +303,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -437,32 +405,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -492,7 +444,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -618,38 +570,22 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 601a400f-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:41 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 601a400f-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -659,10 +595,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Shutting down instance 601a400f-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:02 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:41 PDT 2018:
+Shutting down instance 601a400f-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:41 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -760,42 +696,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 123 more
+	... 107 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -825,7 +745,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -924,36 +844,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 122 more
+	... 106 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -983,7 +887,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -1085,32 +989,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -1140,7 +1028,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -1266,38 +1154,22 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance f81e0010-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:42 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance f81e0010-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -1307,10 +1179,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Shutting down instance f81e0010-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:02 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:42 PDT 2018:
+Shutting down instance f81e0010-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:42 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -1408,42 +1280,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 123 more
+	... 107 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -1473,7 +1329,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -1572,36 +1428,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 122 more
+	... 106 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -1631,7 +1471,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -1733,32 +1573,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -1788,7 +1612,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -1914,38 +1738,22 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 80220011-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:42 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 80220011-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -1955,10 +1763,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:02 PDT 2018:
-Shutting down instance 80220011-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:02 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:42 PDT 2018:
+Shutting down instance 80220011-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:42 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -2056,42 +1864,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 123 more
+	... 107 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -2121,7 +1913,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -2220,36 +2012,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 122 more
+	... 106 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -2279,7 +2055,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -2381,32 +2157,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -2436,7 +2196,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 120 more
+	... 104 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -2562,38 +2322,22 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 08264012-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:42 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 08264012-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -2603,10 +2347,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Shutting down instance 08264012-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:03 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:42 PDT 2018:
+Shutting down instance 08264012-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:42 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -2701,42 +2445,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 117 more
+	... 101 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -2766,7 +2494,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -2862,36 +2590,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 119 more
+	... 103 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -2921,7 +2633,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -3020,32 +2732,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -3075,7 +2771,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -3198,38 +2894,22 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a02ac013-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:42 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a02ac013-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -3239,10 +2919,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Shutting down instance a02ac013-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:03 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:42 PDT 2018:
+Shutting down instance a02ac013-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:42 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -3337,42 +3017,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 117 more
+	... 101 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -3402,7 +3066,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -3498,36 +3162,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 119 more
+	... 103 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -3557,7 +3205,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -3656,32 +3304,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -3711,7 +3343,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -3834,38 +3466,22 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 582f8014-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:42 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 582f8014-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -3875,10 +3491,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Shutting down instance 582f8014-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:03 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:42 PDT 2018:
+Shutting down instance 582f8014-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:42 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -3973,42 +3589,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 117 more
+	... 101 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -4038,7 +3638,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -4134,36 +3734,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 119 more
+	... 103 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -4193,7 +3777,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -4292,32 +3876,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -4347,7 +3915,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -4470,38 +4038,22 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 40348015-0162-3a97-111d-000010c69d38 
-on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
+Sun Mar 18 15:40:42 PDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 40348015-0162-3b45-9f2f-0000068f17d0 
+on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
 Loaded from file:/home/cloudera/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_161-b12
@@ -4511,10 +4063,10 @@ os.arch=amd64
 os.version=2.6.32-696.20.1.el6.x86_64
 derby.system.home=null
 ----------------------------------------------------------------
-Sun Mar 18 12:30:03 PDT 2018:
-Shutting down instance 40348015-0162-3a97-111d-000010c69d38 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3 
-Sun Mar 18 12:30:03 PDT 2018 Thread[streaming-job-executor-0,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+Sun Mar 18 15:40:43 PDT 2018:
+Shutting down instance 40348015-0162-3b45-9f2f-0000068f17d0 on database directory /home/cloudera/IdeaProjects/SparkProject/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438 
+Sun Mar 18 15:40:43 PDT 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -4609,42 +4161,26 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@7dce18b3, see the next exception for details.
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@422b8438, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 120 more
+	... 104 more
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	... 117 more
+	... 101 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -4674,7 +4210,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= begin nested exception, level (1) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -4770,36 +4306,20 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 119 more
+	... 103 more
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -4829,7 +4349,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (1) ===========
 ============= begin nested exception, level (2) ===========
 java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -4928,32 +4448,16 @@ java.sql.SQLException: Database at /home/cloudera/IdeaProjects/SparkProject/meta
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
@@ -4983,7 +4487,7 @@ Caused by: ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/met
 	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
 	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
 	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
-	... 117 more
+	... 101 more
 ============= end nested exception, level (2) ===========
 ============= begin nested exception, level (3) ===========
 ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.12.
@@ -5106,31 +4610,15 @@ ERROR XSLAN: Database at /home/cloudera/IdeaProjects/SparkProject/metastore_db h
 	at scala.Option.getOrElse(Option.scala:121)
 	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:129)
 	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:126)
-	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:170)
-	at org.apache.spark.sql.Dataset$.apply(Dataset.scala:61)
-	at org.apache.spark.sql.SparkSession.createDataset(SparkSession.scala:472)
-	at org.apache.spark.sql.SQLContext.createDataset(SQLContext.scala:392)
-	at org.apache.spark.sql.SQLImplicits.rddToDatasetHolder(SQLImplicits.scala:205)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:44)
-	at KafkaConsumer$$anonfun$main$2.apply(KafkaConsumer.scala:40)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:628)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
-	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
-	at scala.util.Try$.apply(Try.scala:192)
-	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
-	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$getOrCreate$5.apply(SparkSession.scala:938)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:130)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:236)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:130)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:938)
+	at KafkaConsumer$.main(KafkaConsumer.scala:28)
+	at KafkaConsumer.main(KafkaConsumer.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
