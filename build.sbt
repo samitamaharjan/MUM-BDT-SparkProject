@@ -18,7 +18,6 @@ libraryDependencies ++= Seq (
   "org.apache.spark" % "spark-sql_2.11" % sparkVersion,
   "org.apache.spark" % "spark-streaming-kafka-0-10_2.11" % sparkVersion,
   "org.apache.spark" % "spark-hive_2.11" % sparkVersion,
-  //"org.pentaho" % "pentaho-aggdesigner-algorithm" % "5.1.5-jhyde" % Test,
   "org.plotly-scala" % "plotly-core_2.11" % "0.3.3"
 )
 
