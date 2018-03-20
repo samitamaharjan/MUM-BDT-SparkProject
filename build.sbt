@@ -1,8 +1,11 @@
+
 name := "SparkProject"
 
 version := "0.1"
 
 scalaVersion := "2.11.11"
+
+logLevel := Level.Error
 
 val sparkVersion = "2.2.0"
 

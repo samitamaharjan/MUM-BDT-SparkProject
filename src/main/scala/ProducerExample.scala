@@ -14,11 +14,6 @@ object ProducerExample extends App {
 
   val TOPIC="test"
 
- /* for(i<- 1 to 50){
-    val record = new ProducerRecord(TOPIC, "key", s"hello $i")
-    producer.send(record)
-  }
-*/
   val messages = new FileManager().getMessages()
 
   val it = messages.iterator()
@@ -27,7 +22,7 @@ object ProducerExample extends App {
     val msg = it.next()
     val record = new ProducerRecord(TOPIC, "key", msg)
     producer.send(record)
+    Thread.sleep(200)
   }
-
   producer.close()
 }

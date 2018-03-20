@@ -35,7 +35,6 @@ object KafkaConsumer {
       Subscribe[String, String](topics, kafkaParams)
     )
 
-    //val messageHandler = new MessageHandler()
     val hiveContext = new HiveContext(sc)
     import hiveContext.implicits._
 
@@ -49,6 +48,9 @@ object KafkaConsumer {
             toDF("movieId", "customerId", "rating", "ratingDate")
 
           movieDF.write.mode(SaveMode.Append).saveAsTable("movie_rating")
+
+          /*val resultDF = hiveContext.sql("select rating, count(*) total_count from movie_rating group by rating")
+          resultDF.write.mode(SaveMode.Overwrite).saveAsTable("rating_summary")*/
         }
       }}
     ssc.start()
