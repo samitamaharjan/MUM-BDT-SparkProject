@@ -27,7 +27,7 @@ The files will be stored in Hive Table in snappy compression, parquet file forma
 I have written some SparkSQL integrated with Hive in visualisation.scala. In addition, I wrote some queries in Impala to create Hive tables to visualise in tableau.
 
 4. Tableau for visualisation
-I have installed tableau in windows10. I connected tableau with cloudera hadoop using HiveServer2 and cloudera's IP address. This links all the hive tables to the tableau where can I join the tables, and play statistics analysis and plot the charts. If data changes in hive table due to streaming data into the hive table, the charts in tableau also changes. But, we need to have a lot of patience. 
+I have installed tableau in windows10. I connected tableau with cloudera hadoop using HiveServer2 and cloudera's IP address. This links all the hive tables to the tableau where can I join the tables, and play statistics analysis and plot the charts. If data changes in hive table due to streaming data into the hive table, the charts in tableau also changes. But, we need to have a lot of patience to open the file and create the charts. However, the online tableau with data in cloud is much faster than desktop tableau with cloudera hadoop.
 
 
 
