@@ -6,6 +6,15 @@ spark 2.2.0
 jdk 1.8
 kakfa 0.10
 
+#Install scala 2.11 and sbt: https://www.youtube.com/watch?v=SFJsuo2XISs
+#Upgrade jdk1.8: https://github.com/samitamaharjan/MUM-BDT-SparkProject/blob/master/InstallJdk8inCDH.pdf
+#Upgrade spark 2.2.0: https://www.youtube.com/watch?v=NVr5Dc-b4C4
+  # copy spark-env.sh from previous spark to new spark2.2.0 folder in order to run with master "yarn"
+#Install kafka 0.10: 
+  https://www.youtube.com/watch?v=Fg8cTsEk7Gc&t=107s, 
+  https://kafka.apache.org/quickstart, 
+  https://kafka.apache.org/downloads
+
 2. Spark Streaming using Kafka
 # Run the producer.scala file first then run the consumer.scala file. Check if streaming data is published and subscribed by Kafka in terminal 
 # Execute all the commands from the directory where kafka is located: mine is /opt/kafka_2.11-1.0.1
